@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -35,6 +36,7 @@ public class Kontakt {
 
     @Basic(optional = false)
     @NotNull(message = "{model.NotNull.message}")
+    @Column(unique = true)
     private String email;
 
     @Basic(optional = false)
